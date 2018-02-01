@@ -34,6 +34,7 @@
 		D77E937420170F1300294041 /* FSBarChartViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D77E937220170F1300294041 /* FSBarChartViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D77E937520170F1300294041 /* FSBarChartViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77E937320170F1300294041 /* FSBarChartViewCell.m */; };
 		D7850FEB20230E1700246C28 /* UIView+FSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D7850FE920230E1600246C28 /* UIView+FSFrame.m */; };
+		D7850FEC20230EC200246C28 /* UIView+FSFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = D7850FEA20230E1600246C28 /* UIView+FSFrame.h */; };
 		D7B855202021BDA6002ABB48 /* FSStoryBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8551F2021BDA6002ABB48 /* FSStoryBoardController.m */; };
 		D7EFEE132019A7640017ED55 /* FSLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EFEE112019A7640017ED55 /* FSLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7EFEE142019A7640017ED55 /* FSLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EFEE122019A7640017ED55 /* FSLineChartView.m */; };
@@ -317,6 +318,7 @@
 				D7EFEE132019A7640017ED55 /* FSLineChartView.h in Headers */,
 				D77E93702017051B00294041 /* FSBarChartView.h in Headers */,
 				D76D087820203BB700B86464 /* FSPieChartView.h in Headers */,
+				D7850FEC20230EC200246C28 /* UIView+FSFrame.h in Headers */,
 				D76EC44020103A6F00A9F20E /* CALayer+FSFrame.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
