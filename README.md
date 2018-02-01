@@ -19,10 +19,10 @@ FSChartView一款简单的图表库，内含柱状图(垂直&水平)、折线图
 ![目录.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/目录.png)
 
 ## Usage
-三种图表的用法都必须遵守dataSource代理，实现对应必须要实现的dataSource方法。用法基本上都很统一，初始化之后这是dataSource和delgate，然后实现该实现的方法就可以。
+三种图表的用法都必须遵守dataSource代理，实现对应必须要实现的dataSource方法。用法基本上都很统一，初始化之后设置dataSource和delgate，然后实现该实现的方法就可以。
 #### 柱状图
-![垂直柱状图.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/垂直柱状图.pngf)
-![水平柱状图.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/水平柱状图.pngf)
+![垂直柱状图.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/垂直柱状图.png)
+![水平柱状图.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/水平柱状图.png)
 
 ```
 垂直柱状图
@@ -64,7 +64,7 @@ Note：
 - 折线的折点默认是没有样式，如果需要设置可以根据代理方法``lineChartView:lineJoinStyleAtIndexPath:``进行设置，折点的颜色可以通过lineChartView:lineJoinColorAtIndexPath:方法设置。
 
 #### 饼状图
-![饼状图.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/饼状图.pngf)
+![饼状图.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/饼状图.png)
 
 
 ```
