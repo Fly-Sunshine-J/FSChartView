@@ -18,6 +18,20 @@ FSChartView一款简单的图表库，内含柱状图(垂直&水平)、折线图
 ## List
 ![目录.png](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/目录.png)
 
+## Using CocoaPods
+
+```
+target 'projectName' do
+use_frameworks!
+pod 'FSChartView', '~> 1.0.0'
+end
+
+```
+
+#### Tip
+
+如果不能search到，请更新cocoapods库 , `pod setup` 如果还搜索不到，删除~/Library/Caches/CocoaPods目录下的search_index.json文件 再search
+
 ## Usage
 三种图表的用法都必须遵守dataSource代理，实现对应必须要实现的dataSource方法。用法基本上都很统一，初始化之后设置dataSource和delgate，然后实现该实现的方法就可以。
 #### 柱状图
