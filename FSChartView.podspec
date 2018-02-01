@@ -101,7 +101,7 @@ LICENSE
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "FSChartView","FSChartView/**/*.{h,m}"
+s.source_files  = "FSChartView/.{h,m}","FSChartView/**/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
