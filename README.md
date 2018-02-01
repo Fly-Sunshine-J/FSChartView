@@ -1,8 +1,8 @@
 # FSChartView
-一款简单的图表库，内含柱状图(垂直&amp;水平)、折线图、饼状图
+一款简单的图表库，内含柱状图(垂直&amp;水平)、折线图、饼状图，支持StoryBoard。
 
 ## Introduction
-FSChartView一款简单的图表库，内含柱状图(垂直&水平)、折线图、饼状图。
+FSChartView一款简单的图表库，内含柱状图(垂直&水平)、折线图、饼状图，支持StoryBoard。
 柱状图是使用UICollectionView实现，因为UICollectionView自带缓存池，所以选择UICollectionView，里面的很多delegate方法和dataSource方法，看起来很熟悉。折线图和饼状图主要使用CAShapeLayer和UIBezierPath实现。
 ## Overview
 ![垂直柱状图.gif](https://github.com/Fly-Sunshine-J/FSChartView/blob/master/png/BarChartView_V.gif)
