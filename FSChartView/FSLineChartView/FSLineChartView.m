@@ -276,11 +276,15 @@
     [self.lineLayers insertObject:lineLayer atIndex:lineIndex];
     lineLayer.frame = self.bounds;
     lineLayer.strokeColor = [self fs_getLineColorAtLineIndex:lineIndex].CGColor;
-    lineLayer.fillColor = nil;
+    lineLayer.fillColor = [UIColor clearColor].CGColor;
     lineLayer.lineCap = kCALineCapButt;
     lineLayer.lineJoin = kCALineJoinMiter;
     lineLayer.lineWidth = 2.0;
-    lineLayer.strokeEnd = 0.0;
+    lineLayer.strokeStart = 0.0;
+    lineLayer.strokeEnd = 1.0;
+    lineLayer.contentsScale = [UIScreen mainScreen].scale;
+    lineLayer.allowsEdgeAntialiasing = YES;
+    lineLayer.shouldRasterize = YES;
     
     UIBezierPath *linePath = [UIBezierPath bezierPath];
     NSMutableArray<CAShapeLayer *> *pointArray = [NSMutableArray array];

@@ -10,8 +10,6 @@
 
 @interface FSBarChartViewCell : UICollectionViewCell
 
-- (instancetype)initWithFrame:(CGRect)frame;
-
 @property (nonatomic, assign, getter=isPortrait) BOOL portrait;
 
 @property (nonatomic, strong) UILabel *topTextLabel;

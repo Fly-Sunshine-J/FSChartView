@@ -89,6 +89,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    _insets = [self fs_getContentInset];
     self.collectionView.frame = self.bounds;
     if (self.orientation == FSBarChartViewOrientationVertical) {
         self.dataLabelCollectionView.frame = CGRectMake(0, self.fs_height - _insets.bottom + self.abscissaAxis.fs_height, self.collectionView.fs_width, _insets.bottom - self.abscissaAxis.fs_height);
@@ -155,7 +156,6 @@
 //MARK: Private Method
 
 - (void)fs_setupFrame {
-    _insets = [self fs_getContentInset];
     self.collectionView.contentInset = _insets;
     if (self.orientation == FSBarChartViewOrientationVertical) {
         if (self.collectionView.contentSize.width > self.fs_width) {
@@ -234,7 +234,7 @@
                 }
                 xLineView.fs_height = self.ordinateAxis.fs_height;
                 xLineView.fs_centerY = self.ordinateAxis.fs_centerY;
-                xLineView.fs_centerX = self.abscissaAxis.fs_x + lineStep * xSection;
+                xLineView.fs_centerX = self.ordinateAxis.fs_x + self.ordinateAxis.fs_width + lineStep * xSection;
                 xLineView.layer.zPosition = -0.1;
                 [self.collectionView addSubview:xLineView];
                 [self.lineViews addObject:xLineView];
@@ -253,7 +253,7 @@
                     xSectionLabel.fs_height = textSize.height;
                 }
                 xSectionLabel.fs_y = -xSectionLabel.fs_height - 2;
-                xSectionLabel.fs_centerX = self.abscissaAxis.fs_x + lineStep * xSection;
+                xSectionLabel.fs_centerX = self.ordinateAxis.fs_x + self.ordinateAxis.fs_width + lineStep * xSection;
                 [self.collectionView addSubview:xSectionLabel];
                 [self.noDataLabels addObject:xSectionLabel];
             }

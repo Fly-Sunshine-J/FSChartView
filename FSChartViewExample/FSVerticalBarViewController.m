@@ -29,7 +29,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 10; i++) {
         int rand = arc4random() % 101;
         NSMutableArray *array = [NSMutableArray array];
         for (int j = 0; j < 3; j++) {

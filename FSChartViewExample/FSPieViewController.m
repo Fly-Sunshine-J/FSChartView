@@ -32,9 +32,9 @@
         [self.dataArray addObject:@(rand)];
     }
     
-    CGFloat height = (self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 20 * 5) / 3;
+    CGFloat height = (self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 20 * 4 - [UIApplication sharedApplication].statusBarFrame.size.height) / 3;
     
-    FSPieChartView *pieChartView = [[FSPieChartView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height + 40, self.view.frame.size.width, height)];
+    FSPieChartView *pieChartView = [[FSPieChartView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height + [UIApplication sharedApplication].statusBarFrame.size.height + 20, self.view.frame.size.width, height)];
     pieChartView.delegate = self;
     pieChartView.dataSource = self;
     [self.view addSubview:pieChartView];

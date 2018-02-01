@@ -260,6 +260,11 @@
     return [self.dataSource pieChartView:self percentageDataForSection:section];
 }
 
+
+- (UIColor *)fs_getSectionColor:(NSInteger)section {
+    return [self.dataSource pieChartView:self colorForSection:section];
+}
+
 - (UILabel *)fs_getDataLabelForSection:(NSInteger)section {
     if ([self.dataSource respondsToSelector:@selector(pieChartView:dataLabelForSection:)]) {
         return [self.dataSource pieChartView:self dataLabelForSection:section];
@@ -268,9 +273,6 @@
 }
 
 //MARK: -Call Delegate
-- (UIColor *)fs_getSectionColor:(NSInteger)section {
-    return [self.delegate pieChartView:self colorForSection:section];
-}
 
 - (CGFloat)fs_getInnerCircleRadius {
     if ([self.delegate respondsToSelector:@selector(innerCircleRadiusForChartView:)]) {
