@@ -16,5 +16,9 @@
 @property (nonatomic, assign) CGFloat fs_height;
 @property (nonatomic, assign) CGSize fs_size;
 @property (nonatomic, assign) CGPoint fs_origin;
+@property (nonatomic, assign) CGFloat fs_centerX;
+@property (nonatomic, assign) CGFloat fs_centerY;
 
 @end
+
+
