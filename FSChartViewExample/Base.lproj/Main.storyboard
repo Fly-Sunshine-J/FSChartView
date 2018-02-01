@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PYE-9a-Dfe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nsd-Fs-KxN"/>
+                        <viewControllerLayoutGuide type="bottom" id="v2q-L2-ZEc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4zs-Jj-QeH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="48"/>
+        </scene>
+        <!--Story Board Controller-->
+        <scene sceneID="Zci-dp-kHe">
+            <objects>
+                <viewController storyboardIdentifier="FSStoryBoardController" id="Dz7-Pf-QW7" customClass="FSStoryBoardController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1xk-xi-yZK"/>
+                        <viewControllerLayoutGuide type="bottom" id="T14-n3-Npm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aj5-wk-FFl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaA-QI-viy" customClass="FSBarChartView">
+                                <rect key="frame" x="0.0" y="40" width="375" height="189"/>
+                                <color key="backgroundColor" red="0.80521966690000002" green="1" blue="0.41109537169999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="orientation">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0G-5i-w4c" customClass="FSLineChartView">
+                                <rect key="frame" x="0.0" y="249" width="375" height="189"/>
+                                <color key="backgroundColor" red="0.80521966690000002" green="1" blue="0.41109537169999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-0q-NJH" customClass="FSPieChartView">
+                                <rect key="frame" x="0.0" y="458" width="375" height="189"/>
+                                <color key="backgroundColor" red="0.80521966690000002" green="1" blue="0.41109537169999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T14-n3-Npm" firstAttribute="top" secondItem="qWV-0q-NJH" secondAttribute="bottom" constant="20" id="6dV-56-fEO"/>
+                            <constraint firstItem="qWV-0q-NJH" firstAttribute="top" secondItem="v0G-5i-w4c" secondAttribute="bottom" constant="20" id="Bam-2y-64W"/>
+                            <constraint firstItem="v0G-5i-w4c" firstAttribute="top" secondItem="iaA-QI-viy" secondAttribute="bottom" constant="20" id="HGG-c4-Lfj"/>
+                            <constraint firstAttribute="trailing" secondItem="v0G-5i-w4c" secondAttribute="trailing" id="QCe-v4-6zM"/>
+                            <constraint firstItem="iaA-QI-viy" firstAttribute="leading" secondItem="Aj5-wk-FFl" secondAttribute="leading" id="QPb-g6-bxH"/>
+                            <constraint firstItem="iaA-QI-viy" firstAttribute="top" secondItem="1xk-xi-yZK" secondAttribute="bottom" constant="20" id="ZfG-SM-Uit"/>
+                            <constraint firstAttribute="trailing" secondItem="iaA-QI-viy" secondAttribute="trailing" id="bui-c9-UnJ"/>
+                            <constraint firstItem="v0G-5i-w4c" firstAttribute="leading" secondItem="Aj5-wk-FFl" secondAttribute="leading" id="dxV-tH-At8"/>
+                            <constraint firstItem="v0G-5i-w4c" firstAttribute="height" secondItem="iaA-QI-viy" secondAttribute="height" id="eQ8-Sw-AB6"/>
+                            <constraint firstAttribute="trailing" secondItem="qWV-0q-NJH" secondAttribute="trailing" id="eUO-b2-htt"/>
+                            <constraint firstItem="v0G-5i-w4c" firstAttribute="top" secondItem="iaA-QI-viy" secondAttribute="bottom" constant="20" id="erK-Lf-i8i"/>
+                            <constraint firstItem="qWV-0q-NJH" firstAttribute="leading" secondItem="Aj5-wk-FFl" secondAttribute="leading" id="fMA-Tc-CMC"/>
+                            <constraint firstItem="qWV-0q-NJH" firstAttribute="top" secondItem="v0G-5i-w4c" secondAttribute="bottom" constant="20" id="mAv-jP-mMz"/>
+                            <constraint firstItem="qWV-0q-NJH" firstAttribute="height" secondItem="iaA-QI-viy" secondAttribute="height" id="q6n-aU-hYt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="iaA-QI-viy" id="aDS-ct-BSE"/>
+                        <outlet property="lineChartView" destination="v0G-5i-w4c" id="uDB-jN-VhU"/>
+                        <outlet property="pieChartView" destination="qWV-0q-NJH" id="fJi-vU-0n7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWy-8W-kVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293.5999999999999" y="92.203898050974516"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ymn-qG-Msc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PYE-9a-Dfe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wQp-tp-DUH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lQK-Sv-LCQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYS-uS-VfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="188"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D76D087820203BB700B86464 /* FSPieChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = D76D087620203BB700B86464 /* FSPieChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D76D087920203BB700B86464 /* FSPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D76D087720203BB700B86464 /* FSPieChartView.m */; };
+		D76EC3DA2010370300A9F20E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC3D92010370300A9F20E /* AppDelegate.m */; };
+		D76EC3DD2010370300A9F20E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC3DC2010370300A9F20E /* ViewController.m */; };
+		D76EC3E02010370300A9F20E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76EC3DE2010370300A9F20E /* Main.storyboard */; };
+		D76EC3E22010370300A9F20E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76EC3E12010370300A9F20E /* Assets.xcassets */; };
+		D76EC3E52010370300A9F20E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76EC3E32010370300A9F20E /* LaunchScreen.storyboard */; };
+		D76EC3E82010370300A9F20E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC3E72010370300A9F20E /* main.m */; };
+		D76EC3F22010370300A9F20E /* FSChartViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC3F12010370300A9F20E /* FSChartViewExampleTests.m */; };
+		D76EC3FD2010370300A9F20E /* FSChartViewExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC3FC2010370300A9F20E /* FSChartViewExampleUITests.m */; };
+		D76EC4182010372100A9F20E /* FSChartView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76EC40F2010372000A9F20E /* FSChartView.framework */; };
+		D76EC41F2010372100A9F20E /* FSChartViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC41E2010372100A9F20E /* FSChartViewTests.m */; };
+		D76EC4212010372100A9F20E /* FSChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = D76EC4112010372000A9F20E /* FSChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D76EC4242010372100A9F20E /* FSChartView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76EC40F2010372000A9F20E /* FSChartView.framework */; };
+		D76EC4252010372100A9F20E /* FSChartView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76EC40F2010372000A9F20E /* FSChartView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D76EC43D2010392800A9F20E /* UIView+FSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC43B201038F300A9F20E /* UIView+FSFrame.m */; };
+		D76EC44020103A6F00A9F20E /* CALayer+FSFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = D76EC43E20103A6F00A9F20E /* CALayer+FSFrame.h */; };
+		D76EC44120103A6F00A9F20E /* CALayer+FSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC43F20103A6F00A9F20E /* CALayer+FSFrame.m */; };
+		D76EEB172015DD4600EDE121 /* UIView+FSFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = D76EC43C201038F300A9F20E /* UIView+FSFrame.h */; };
+		D77BB29A2011D81B0019D478 /* FSVerticalBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77BB2992011D81B0019D478 /* FSVerticalBarViewController.m */; };
+		D77BB29D2011D98E0019D478 /* FSHorizontalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77BB29C2011D98E0019D478 /* FSHorizontalViewController.m */; };
+		D77BB2A02011D9A20019D478 /* FSLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77BB29F2011D9A20019D478 /* FSLineViewController.m */; };
+		D77BB2A32011D9AA0019D478 /* FSPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77BB2A22011D9AA0019D478 /* FSPieViewController.m */; };
+		D77E936D2016D1E000294041 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77E936C2016D1E000294041 /* FSTableView.m */; };
+		D77E93702017051B00294041 /* FSBarChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = D77E936E2017051B00294041 /* FSBarChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D77E93712017051B00294041 /* FSBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77E936F2017051B00294041 /* FSBarChartView.m */; };
+		D77E937420170F1300294041 /* FSBarChartViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D77E937220170F1300294041 /* FSBarChartViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D77E937520170F1300294041 /* FSBarChartViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77E937320170F1300294041 /* FSBarChartViewCell.m */; };
+		D7B855202021BDA6002ABB48 /* FSStoryBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B8551F2021BDA6002ABB48 /* FSStoryBoardController.m */; };
+		D7EFEE132019A7640017ED55 /* FSLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EFEE112019A7640017ED55 /* FSLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7EFEE142019A7640017ED55 /* FSLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EFEE122019A7640017ED55 /* FSLineChartView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D76EC3EE2010370300A9F20E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76EC3CD2010370300A9F20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D76EC3D42010370300A9F20E;
+			remoteInfo = FSChartViewExample;
+		};
+		D76EC3F92010370300A9F20E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76EC3CD2010370300A9F20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D76EC3D42010370300A9F20E;
+			remoteInfo = FSChartViewExample;
+		};
+		D76EC4192010372100A9F20E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76EC3CD2010370300A9F20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D76EC40E2010372000A9F20E;
+			remoteInfo = FSChartView;
+		};
+		D76EC41B2010372100A9F20E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76EC3CD2010370300A9F20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D76EC3D42010370300A9F20E;
+			remoteInfo = FSChartViewExample;
+		};
+		D76EC4222010372100A9F20E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76EC3CD2010370300A9F20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D76EC40E2010372000A9F20E;
+			remoteInfo = FSChartView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D76EC4292010372100A9F20E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D76EC4252010372100A9F20E /* FSChartView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D76D087620203BB700B86464 /* FSPieChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPieChartView.h; sourceTree = "<group>"; };
+		D76D087720203BB700B86464 /* FSPieChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPieChartView.m; sourceTree = "<group>"; };
+		D76EC3D52010370300A9F20E /* FSChartViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSChartViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76EC3D82010370300A9F20E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D76EC3D92010370300A9F20E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D76EC3DB2010370300A9F20E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D76EC3DC2010370300A9F20E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D76EC3DF2010370300A9F20E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D76EC3E12010370300A9F20E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D76EC3E42010370300A9F20E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D76EC3E62010370300A9F20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76EC3E72010370300A9F20E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D76EC3ED2010370300A9F20E /* FSChartViewExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSChartViewExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76EC3F12010370300A9F20E /* FSChartViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChartViewExampleTests.m; sourceTree = "<group>"; };
+		D76EC3F32010370300A9F20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76EC3F82010370300A9F20E /* FSChartViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSChartViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76EC3FC2010370300A9F20E /* FSChartViewExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChartViewExampleUITests.m; sourceTree = "<group>"; };
+		D76EC3FE2010370300A9F20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76EC40F2010372000A9F20E /* FSChartView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSChartView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76EC4112010372000A9F20E /* FSChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSChartView.h; sourceTree = "<group>"; };
+		D76EC4122010372000A9F20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76EC4172010372100A9F20E /* FSChartViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSChartViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76EC41E2010372100A9F20E /* FSChartViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChartViewTests.m; sourceTree = "<group>"; };
+		D76EC4202010372100A9F20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76EC43B201038F300A9F20E /* UIView+FSFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+FSFrame.m"; path = "../../FSPageControllerExample/FSPageController/UIView+FSFrame.m"; sourceTree = "<group>"; };
+		D76EC43C201038F300A9F20E /* UIView+FSFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+FSFrame.h"; path = "../../FSPageControllerExample/FSPageController/UIView+FSFrame.h"; sourceTree = "<group>"; };
+		D76EC43E20103A6F00A9F20E /* CALayer+FSFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+FSFrame.h"; sourceTree = "<group>"; };
+		D76EC43F20103A6F00A9F20E /* CALayer+FSFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+FSFrame.m"; sourceTree = "<group>"; };
+		D77BB2982011D81B0019D478 /* FSVerticalBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSVerticalBarViewController.h; sourceTree = "<group>"; };
+		D77BB2992011D81B0019D478 /* FSVerticalBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSVerticalBarViewController.m; sourceTree = "<group>"; };
+		D77BB29B2011D98E0019D478 /* FSHorizontalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSHorizontalViewController.h; sourceTree = "<group>"; };
+		D77BB29C2011D98E0019D478 /* FSHorizontalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSHorizontalViewController.m; sourceTree = "<group>"; };
+		D77BB29E2011D9A20019D478 /* FSLineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSLineViewController.h; sourceTree = "<group>"; };
+		D77BB29F2011D9A20019D478 /* FSLineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSLineViewController.m; sourceTree = "<group>"; };
+		D77BB2A12011D9AA0019D478 /* FSPieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPieViewController.h; sourceTree = "<group>"; };
+		D77BB2A22011D9AA0019D478 /* FSPieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPieViewController.m; sourceTree = "<group>"; };
+		D77E936B2016D1E000294041 /* FSTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSTableView.h; sourceTree = "<group>"; };
+		D77E936C2016D1E000294041 /* FSTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSTableView.m; sourceTree = "<group>"; };
+		D77E936E2017051B00294041 /* FSBarChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSBarChartView.h; sourceTree = "<group>"; };
+		D77E936F2017051B00294041 /* FSBarChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSBarChartView.m; sourceTree = "<group>"; };
+		D77E937220170F1300294041 /* FSBarChartViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSBarChartViewCell.h; sourceTree = "<group>"; };
+		D77E937320170F1300294041 /* FSBarChartViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSBarChartViewCell.m; sourceTree = "<group>"; };
+		D7B8551E2021BDA6002ABB48 /* FSStoryBoardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSStoryBoardController.h; sourceTree = "<group>"; };
+		D7B8551F2021BDA6002ABB48 /* FSStoryBoardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSStoryBoardController.m; sourceTree = "<group>"; };
+		D7EFEE112019A7640017ED55 /* FSLineChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSLineChartView.h; sourceTree = "<group>"; };
+		D7EFEE122019A7640017ED55 /* FSLineChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSLineChartView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D76EC3D22010370300A9F20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76EC4242010372100A9F20E /* FSChartView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC3EA2010370300A9F20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC3F52010370300A9F20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC40B2010372000A9F20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC4142010372000A9F20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76EC4182010372100A9F20E /* FSChartView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D76EC3CC2010370300A9F20E = {
+			isa = PBXGroup;
+			children = (
+				D76EC3D72010370300A9F20E /* FSChartViewExample */,
+				D76EC3F02010370300A9F20E /* FSChartViewExampleTests */,
+				D76EC3FB2010370300A9F20E /* FSChartViewExampleUITests */,
+				D76EC4102010372000A9F20E /* FSChartView */,
+				D76EC41D2010372100A9F20E /* FSChartViewTests */,
+				D76EC3D62010370300A9F20E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D76EC3D62010370300A9F20E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D76EC3D52010370300A9F20E /* FSChartViewExample.app */,
+				D76EC3ED2010370300A9F20E /* FSChartViewExampleTests.xctest */,
+				D76EC3F82010370300A9F20E /* FSChartViewExampleUITests.xctest */,
+				D76EC40F2010372000A9F20E /* FSChartView.framework */,
+				D76EC4172010372100A9F20E /* FSChartViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D76EC3D72010370300A9F20E /* FSChartViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				D76EC3D82010370300A9F20E /* AppDelegate.h */,
+				D76EC3D92010370300A9F20E /* AppDelegate.m */,
+				D76EC3DB2010370300A9F20E /* ViewController.h */,
+				D76EC3DC2010370300A9F20E /* ViewController.m */,
+				D77BB2982011D81B0019D478 /* FSVerticalBarViewController.h */,
+				D77BB2992011D81B0019D478 /* FSVerticalBarViewController.m */,
+				D77BB29B2011D98E0019D478 /* FSHorizontalViewController.h */,
+				D77BB29C2011D98E0019D478 /* FSHorizontalViewController.m */,
+				D77BB29E2011D9A20019D478 /* FSLineViewController.h */,
+				D77BB29F2011D9A20019D478 /* FSLineViewController.m */,
+				D77BB2A12011D9AA0019D478 /* FSPieViewController.h */,
+				D77BB2A22011D9AA0019D478 /* FSPieViewController.m */,
+				D7B8551E2021BDA6002ABB48 /* FSStoryBoardController.h */,
+				D7B8551F2021BDA6002ABB48 /* FSStoryBoardController.m */,
+				D76EC3DE2010370300A9F20E /* Main.storyboard */,
+				D76EC3E12010370300A9F20E /* Assets.xcassets */,
+				D76EC3E32010370300A9F20E /* LaunchScreen.storyboard */,
+				D76EC3E62010370300A9F20E /* Info.plist */,
+				D76EC3E72010370300A9F20E /* main.m */,
+				D77E936B2016D1E000294041 /* FSTableView.h */,
+				D77E936C2016D1E000294041 /* FSTableView.m */,
+			);
+			path = FSChartViewExample;
+			sourceTree = "<group>";
+		};
+		D76EC3F02010370300A9F20E /* FSChartViewExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				D76EC3F12010370300A9F20E /* FSChartViewExampleTests.m */,
+				D76EC3F32010370300A9F20E /* Info.plist */,
+			);
+			path = FSChartViewExampleTests;
+			sourceTree = "<group>";
+		};
+		D76EC3FB2010370300A9F20E /* FSChartViewExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D76EC3FC2010370300A9F20E /* FSChartViewExampleUITests.m */,
+				D76EC3FE2010370300A9F20E /* Info.plist */,
+			);
+			path = FSChartViewExampleUITests;
+			sourceTree = "<group>";
+		};
+		D76EC4102010372000A9F20E /* FSChartView */ = {
+			isa = PBXGroup;
+			children = (
+				D76EC438201037A000A9F20E /* FSLineChartView */,
+				D76EC4372010378600A9F20E /* FSPieChartView */,
+				D76EC4322010376C00A9F20E /* FSBarChartView */,
+				D76EC43C201038F300A9F20E /* UIView+FSFrame.h */,
+				D76EC43B201038F300A9F20E /* UIView+FSFrame.m */,
+				D76EC43E20103A6F00A9F20E /* CALayer+FSFrame.h */,
+				D76EC43F20103A6F00A9F20E /* CALayer+FSFrame.m */,
+				D76EC4112010372000A9F20E /* FSChartView.h */,
+				D76EC4122010372000A9F20E /* Info.plist */,
+			);
+			path = FSChartView;
+			sourceTree = "<group>";
+		};
+		D76EC41D2010372100A9F20E /* FSChartViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				D76EC41E2010372100A9F20E /* FSChartViewTests.m */,
+				D76EC4202010372100A9F20E /* Info.plist */,
+			);
+			path = FSChartViewTests;
+			sourceTree = "<group>";
+		};
+		D76EC4322010376C00A9F20E /* FSBarChartView */ = {
+			isa = PBXGroup;
+			children = (
+				D77E936E2017051B00294041 /* FSBarChartView.h */,
+				D77E936F2017051B00294041 /* FSBarChartView.m */,
+				D77E937220170F1300294041 /* FSBarChartViewCell.h */,
+				D77E937320170F1300294041 /* FSBarChartViewCell.m */,
+			);
+			path = FSBarChartView;
+			sourceTree = "<group>";
+		};
+		D76EC4372010378600A9F20E /* FSPieChartView */ = {
+			isa = PBXGroup;
+			children = (
+				D76D087620203BB700B86464 /* FSPieChartView.h */,
+				D76D087720203BB700B86464 /* FSPieChartView.m */,
+			);
+			path = FSPieChartView;
+			sourceTree = "<group>";
+		};
+		D76EC438201037A000A9F20E /* FSLineChartView */ = {
+			isa = PBXGroup;
+			children = (
+				D7EFEE112019A7640017ED55 /* FSLineChartView.h */,
+				D7EFEE122019A7640017ED55 /* FSLineChartView.m */,
+			);
+			path = FSLineChartView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D76EC40C2010372000A9F20E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76EC4212010372100A9F20E /* FSChartView.h in Headers */,
+				D77E937420170F1300294041 /* FSBarChartViewCell.h in Headers */,
+				D7EFEE132019A7640017ED55 /* FSLineChartView.h in Headers */,
+				D77E93702017051B00294041 /* FSBarChartView.h in Headers */,
+				D76D087820203BB700B86464 /* FSPieChartView.h in Headers */,
+				D76EEB172015DD4600EDE121 /* UIView+FSFrame.h in Headers */,
+				D76EC44020103A6F00A9F20E /* CALayer+FSFrame.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D76EC3D42010370300A9F20E /* FSChartViewExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D76EC4012010370300A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewExample" */;
+			buildPhases = (
+				D76EC3D12010370300A9F20E /* Sources */,
+				D76EC3D22010370300A9F20E /* Frameworks */,
+				D76EC3D32010370300A9F20E /* Resources */,
+				D76EC4292010372100A9F20E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D76EC4232010372100A9F20E /* PBXTargetDependency */,
+			);
+			name = FSChartViewExample;
+			productName = FSChartViewExample;
+			productReference = D76EC3D52010370300A9F20E /* FSChartViewExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D76EC3EC2010370300A9F20E /* FSChartViewExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D76EC4042010370300A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewExampleTests" */;
+			buildPhases = (
+				D76EC3E92010370300A9F20E /* Sources */,
+				D76EC3EA2010370300A9F20E /* Frameworks */,
+				D76EC3EB2010370300A9F20E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D76EC3EF2010370300A9F20E /* PBXTargetDependency */,
+			);
+			name = FSChartViewExampleTests;
+			productName = FSChartViewExampleTests;
+			productReference = D76EC3ED2010370300A9F20E /* FSChartViewExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D76EC3F72010370300A9F20E /* FSChartViewExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D76EC4072010370300A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewExampleUITests" */;
+			buildPhases = (
+				D76EC3F42010370300A9F20E /* Sources */,
+				D76EC3F52010370300A9F20E /* Frameworks */,
+				D76EC3F62010370300A9F20E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D76EC3FA2010370300A9F20E /* PBXTargetDependency */,
+			);
+			name = FSChartViewExampleUITests;
+			productName = FSChartViewExampleUITests;
+			productReference = D76EC3F82010370300A9F20E /* FSChartViewExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D76EC40E2010372000A9F20E /* FSChartView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D76EC4262010372100A9F20E /* Build configuration list for PBXNativeTarget "FSChartView" */;
+			buildPhases = (
+				D76EC40A2010372000A9F20E /* Sources */,
+				D76EC40B2010372000A9F20E /* Frameworks */,
+				D76EC40C2010372000A9F20E /* Headers */,
+				D76EC40D2010372000A9F20E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSChartView;
+			productName = FSChartView;
+			productReference = D76EC40F2010372000A9F20E /* FSChartView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D76EC4162010372000A9F20E /* FSChartViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D76EC42A2010372100A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewTests" */;
+			buildPhases = (
+				D76EC4132010372000A9F20E /* Sources */,
+				D76EC4142010372000A9F20E /* Frameworks */,
+				D76EC4152010372000A9F20E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D76EC41A2010372100A9F20E /* PBXTargetDependency */,
+				D76EC41C2010372100A9F20E /* PBXTargetDependency */,
+			);
+			name = FSChartViewTests;
+			productName = FSChartViewTests;
+			productReference = D76EC4172010372100A9F20E /* FSChartViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D76EC3CD2010370300A9F20E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FS;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = vcyber;
+				TargetAttributes = {
+					D76EC3D42010370300A9F20E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
+					};
+					D76EC3EC2010370300A9F20E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D76EC3D42010370300A9F20E;
+					};
+					D76EC3F72010370300A9F20E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D76EC3D42010370300A9F20E;
+					};
+					D76EC40E2010372000A9F20E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
+					};
+					D76EC4162010372000A9F20E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D76EC3D42010370300A9F20E;
+					};
+				};
+			};
+			buildConfigurationList = D76EC3D02010370300A9F20E /* Build configuration list for PBXProject "FSChartViewExample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D76EC3CC2010370300A9F20E;
+			productRefGroup = D76EC3D62010370300A9F20E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D76EC3D42010370300A9F20E /* FSChartViewExample */,
+				D76EC3EC2010370300A9F20E /* FSChartViewExampleTests */,
+				D76EC3F72010370300A9F20E /* FSChartViewExampleUITests */,
+				D76EC40E2010372000A9F20E /* FSChartView */,
+				D76EC4162010372000A9F20E /* FSChartViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D76EC3D32010370300A9F20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76EC3E52010370300A9F20E /* LaunchScreen.storyboard in Resources */,
+				D76EC3E22010370300A9F20E /* Assets.xcassets in Resources */,
+				D76EC3E02010370300A9F20E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC3EB2010370300A9F20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC3F62010370300A9F20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC40D2010372000A9F20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC4152010372000A9F20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D76EC3D12010370300A9F20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B855202021BDA6002ABB48 /* FSStoryBoardController.m in Sources */,
+				D77BB29D2011D98E0019D478 /* FSHorizontalViewController.m in Sources */,
+				D76EC3DD2010370300A9F20E /* ViewController.m in Sources */,
+				D76EC3E82010370300A9F20E /* main.m in Sources */,
+				D77BB2A32011D9AA0019D478 /* FSPieViewController.m in Sources */,
+				D77E936D2016D1E000294041 /* FSTableView.m in Sources */,
+				D76EC3DA2010370300A9F20E /* AppDelegate.m in Sources */,
+				D77BB29A2011D81B0019D478 /* FSVerticalBarViewController.m in Sources */,
+				D77BB2A02011D9A20019D478 /* FSLineViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC3E92010370300A9F20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76EC3F22010370300A9F20E /* FSChartViewExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC3F42010370300A9F20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76EC3FD2010370300A9F20E /* FSChartViewExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC40A2010372000A9F20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7EFEE142019A7640017ED55 /* FSLineChartView.m in Sources */,
+				D77E93712017051B00294041 /* FSBarChartView.m in Sources */,
+				D76EC44120103A6F00A9F20E /* CALayer+FSFrame.m in Sources */,
+				D76D087920203BB700B86464 /* FSPieChartView.m in Sources */,
+				D77E937520170F1300294041 /* FSBarChartViewCell.m in Sources */,
+				D76EC43D2010392800A9F20E /* UIView+FSFrame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D76EC4132010372000A9F20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76EC41F2010372100A9F20E /* FSChartViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D76EC3EF2010370300A9F20E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D76EC3D42010370300A9F20E /* FSChartViewExample */;
+			targetProxy = D76EC3EE2010370300A9F20E /* PBXContainerItemProxy */;
+		};
+		D76EC3FA2010370300A9F20E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D76EC3D42010370300A9F20E /* FSChartViewExample */;
+			targetProxy = D76EC3F92010370300A9F20E /* PBXContainerItemProxy */;
+		};
+		D76EC41A2010372100A9F20E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D76EC40E2010372000A9F20E /* FSChartView */;
+			targetProxy = D76EC4192010372100A9F20E /* PBXContainerItemProxy */;
+		};
+		D76EC41C2010372100A9F20E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D76EC3D42010370300A9F20E /* FSChartViewExample */;
+			targetProxy = D76EC41B2010372100A9F20E /* PBXContainerItemProxy */;
+		};
+		D76EC4232010372100A9F20E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D76EC40E2010372000A9F20E /* FSChartView */;
+			targetProxy = D76EC4222010372100A9F20E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D76EC3DE2010370300A9F20E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D76EC3DF2010370300A9F20E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D76EC3E32010370300A9F20E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D76EC3E42010370300A9F20E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D76EC3FF2010370300A9F20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D76EC4002010370300A9F20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D76EC4022010370300A9F20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M974WD5VWM;
+				INFOPLIST_FILE = FSChartViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "33411a0e-869f-422d-b4df-58944913c202";
+				PROVISIONING_PROFILE_SPECIFIER = CYW_ALL_APP_Development;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D76EC4032010370300A9F20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FSChartViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D76EC4052010370300A9F20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FSChartViewExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSChartViewExample.app/FSChartViewExample";
+			};
+			name = Debug;
+		};
+		D76EC4062010370300A9F20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FSChartViewExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSChartViewExample.app/FSChartViewExample";
+			};
+			name = Release;
+		};
+		D76EC4082010370300A9F20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FSChartViewExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FSChartViewExample;
+			};
+			name = Debug;
+		};
+		D76EC4092010370300A9F20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FSChartViewExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FSChartViewExample;
+			};
+			name = Release;
+		};
+		D76EC4272010372100A9F20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FSChartView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D76EC4282010372100A9F20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FSChartView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D76EC42B2010372100A9F20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FSChartViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSChartViewExample.app/FSChartViewExample";
+			};
+			name = Debug;
+		};
+		D76EC42C2010372100A9F20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FSChartViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyw.FSChartViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSChartViewExample.app/FSChartViewExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D76EC3D02010370300A9F20E /* Build configuration list for PBXProject "FSChartViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76EC3FF2010370300A9F20E /* Debug */,
+				D76EC4002010370300A9F20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D76EC4012010370300A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76EC4022010370300A9F20E /* Debug */,
+				D76EC4032010370300A9F20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D76EC4042010370300A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76EC4052010370300A9F20E /* Debug */,
+				D76EC4062010370300A9F20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D76EC4072010370300A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76EC4082010370300A9F20E /* Debug */,
+				D76EC4092010370300A9F20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D76EC4262010372100A9F20E /* Build configuration list for PBXNativeTarget "FSChartView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76EC4272010372100A9F20E /* Debug */,
+				D76EC4282010372100A9F20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D76EC42A2010372100A9F20E /* Build configuration list for PBXNativeTarget "FSChartViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D76EC42B2010372100A9F20E /* Debug */,
+				D76EC42C2010372100A9F20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D76EC3CD2010370300A9F20E /* Project object */;
+}
