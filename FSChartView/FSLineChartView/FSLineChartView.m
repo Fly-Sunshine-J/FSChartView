@@ -277,8 +277,8 @@
     lineLayer.frame = self.bounds;
     lineLayer.strokeColor = [self fs_getLineColorAtLineIndex:lineIndex].CGColor;
     lineLayer.fillColor = [UIColor clearColor].CGColor;
-    lineLayer.lineCap = kCALineCapButt;
-    lineLayer.lineJoin = kCALineJoinMiter;
+    lineLayer.lineCap = kCALineCapRound;
+    lineLayer.lineJoin = kCALineJoinRound;
     lineLayer.lineWidth = 2.0;
     lineLayer.strokeStart = 0.0;
     lineLayer.strokeEnd = 1.0;
