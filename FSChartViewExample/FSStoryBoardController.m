@@ -140,14 +140,14 @@
 }
 
 - (NSInteger)numberOfSectionsInOrdinateAxisForLineChartView:(FSLineChartView *)chartView {
-    return 11;
+    return 6;
 }
 
 
 - (UILabel *)lineChartView:(FSLineChartView *)chartView ordinateAxisLableForSection:(NSInteger)section {
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont systemFontOfSize:10];
-    label.text = @(section * 10).stringValue;
+    label.text = @(section * 20).stringValue;
     return label;
 }
 
