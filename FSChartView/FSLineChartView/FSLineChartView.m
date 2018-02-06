@@ -35,6 +35,8 @@
     NSInteger _lineCount;
 }
 
+@property (nonatomic, strong) UIView *contentView;
+
 @property (nonatomic, strong, readwrite) UIView *abscissaAxis;
 @property (nonatomic, strong, readwrite) UIView *ordinateAxis;
 
@@ -74,6 +76,9 @@
     if (self) {
         self.backgroundColor = [UIColor colorWithRed:254 / 255.0 green:197 / 255.0 blue:52 / 255.0 alpha:1];
         self.layer.masksToBounds = YES;
+        _contentView = [[UIView alloc] initWithFrame:self.bounds];
+        _contentView.backgroundColor = [UIColor redColor];
+        [self addSubview:_contentView];
         _animatedDuration = 1.0;
     }
     return self;
@@ -83,11 +88,14 @@
     [super awakeFromNib];
     self.backgroundColor = [UIColor colorWithRed:254 / 255.0 green:197 / 255.0 blue:52 / 255.0 alpha:1];
     self.layer.masksToBounds = YES;
+    _contentView = [[UIView alloc] initWithFrame:self.bounds];
+    [self addSubview:_contentView];
     _animatedDuration = 1.0;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    _contentView.frame = self.bounds;
     [self reloadData];
 }
 
@@ -155,7 +163,7 @@
             yLineView.fs_x = self.ordinateAxis.fs_width + self.ordinateAxis.fs_x;
             yLineView.fs_centerY = self.ordinateAxis.fs_height - self.ordinateAxis.fs_y - lineStep * ySection;
             yLineView.layer.zPosition = -1.0;
-            [self addSubview:yLineView];
+            [self.contentView addSubview:yLineView];
             [self.lineViews addObject:yLineView];
             if (ySection == 0) {
                 yLineView.backgroundColor = [UIColor clearColor];
@@ -182,7 +190,7 @@
                 textSize = [ySectionLabel.text sizeWithAttributes:@{NSFontAttributeName:ySectionLabel.font}];
             }
             textLayer.frame = CGRectMake(_insets.left - textSize.width - 2, self.ordinateAxis.fs_height  - self.ordinateAxis.fs_y - lineStep * ySection - textSize.height / 2, textSize.width, textSize.height);
-            [self.layer addSublayer:textLayer];
+            [self.contentView.layer addSublayer:textLayer];
             [self.ordinateLayers addObject:textLayer];
         }
     }
@@ -217,7 +225,7 @@
         }
         CGFloat centerX = [self.spaces[section] floatValue];
         textLayer.frame = CGRectMake(centerX - textSize.width / 2, self.abscissaAxis.fs_y + self.abscissaAxis.fs_height + 2, textSize.width, textSize.height);
-        [self.layer addSublayer:textLayer];
+        [self.contentView.layer addSublayer:textLayer];
         [self.abscissaLayers addObject:textLayer];
     }
 }
@@ -272,19 +280,16 @@
     CGFloat height = self.fs_height - _insets.top - _insets.bottom - self.abscissaAxis.fs_height;
     
     CAShapeLayer *lineLayer = [CAShapeLayer layer];
-    [self.layer addSublayer:lineLayer];
+    [self.contentView.layer addSublayer:lineLayer];
     [self.lineLayers insertObject:lineLayer atIndex:lineIndex];
     lineLayer.frame = self.bounds;
     lineLayer.strokeColor = [self fs_getLineColorAtLineIndex:lineIndex].CGColor;
-    lineLayer.fillColor = [UIColor clearColor].CGColor;
+    lineLayer.fillColor = nil;
     lineLayer.lineCap = kCALineCapRound;
     lineLayer.lineJoin = kCALineJoinRound;
     lineLayer.lineWidth = 2.0;
-    lineLayer.strokeStart = 0.0;
-    lineLayer.strokeEnd = 1.0;
     lineLayer.contentsScale = [UIScreen mainScreen].scale;
-    lineLayer.allowsEdgeAntialiasing = YES;
-    lineLayer.shouldRasterize = YES;
+    
     
     UIBezierPath *linePath = [UIBezierPath bezierPath];
     NSMutableArray<CAShapeLayer *> *pointArray = [NSMutableArray array];
@@ -311,7 +316,7 @@
         pointShape.strokeColor = strockColor.CGColor;
         pointShape.fillColor = self.backgroundColor.CGColor;
         pointShape.lineWidth = 1.5;
-        [self.layer addSublayer:pointShape];
+        [self.contentView.layer addSublayer:pointShape];
         [pointArray addObject:pointShape];
         
         FSLineJoinStyle style = [self fs_getLineJoinStyleAtIndexPath:indexPath];
@@ -353,7 +358,6 @@
     progressAnimation.fromValue = @0.0;
     progressAnimation.toValue = @1.0;
     [lineLayer addAnimation:progressAnimation forKey:@"progressAnimation"];
-    lineLayer.strokeEnd = 1.0;
 }
 
 - (CATextLayer *)fs_createDataTextLayerAtIndexPath:(FSIndexPath *)indexPath WithPoint:(CGPoint)point {
@@ -376,7 +380,7 @@
     }
     textLayer.frame = CGRectMake(point.x - textSize.width / 2, point.y - 3 - textSize.height, textSize.width, textSize.height);
     textLayer.zPosition = 0.1;
-    [self.layer addSublayer:textLayer];
+    [self.contentView.layer addSublayer:textLayer];
     return textLayer;
 }
 
@@ -404,7 +408,7 @@
     if (!_abscissaAxis) {
         _abscissaAxis = [[UIView alloc] init];
         _abscissaAxis.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-        [self addSubview:_abscissaAxis];
+        [self.contentView addSubview:_abscissaAxis];
     }
     return _abscissaAxis;
 }
@@ -414,7 +418,7 @@
     if (!_ordinateAxis) {
         _ordinateAxis = [[UIView alloc] init];
         _ordinateAxis.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-        [self addSubview:_ordinateAxis];
+        [self.contentView addSubview:_ordinateAxis];
     }
     return _ordinateAxis;
 }

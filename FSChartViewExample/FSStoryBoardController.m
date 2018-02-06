@@ -47,11 +47,9 @@
         int rand = arc4random() % 101;
         [self.pieChartArray addObject:@(rand)];
     }
-//    self.barChartView = [[FSBarChartView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200) orientation:FSBarChartViewOrientationHorizontal];
     [self.barChartView registerClass:[FSBarChartViewCell class] forCellWithReuseIdentifier:@"CELL"];
     self.barChartView.delegate = self;
     self.barChartView.dataSource = self;
-//    [self.view addSubview:self.barChartView];
     
     self.lineChartView.delegate = self;
     self.lineChartView.dataSource = self;
