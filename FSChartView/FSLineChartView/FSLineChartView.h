@@ -133,6 +133,16 @@ typedef NS_ENUM(NSInteger, FSLineJoinStyle) {
  */
 - (UIColor *)lineChartView:(FSLineChartView *)chartView lineColorAtLineIndex:(NSInteger)lineIndex;
 
+
+/**
+ 折线的宽度，默认2.0
+
+ @param chartView chartView
+ @param lineIndex 折线的下标
+ @return 折线的宽度
+ */
+- (CGFloat)lineChartView:(FSLineChartView *)chartView lineWidthAtLineIndex:(NSInteger)lineIndex;
+
 /**
  折线连接点的样式，默认没有任何样式
 

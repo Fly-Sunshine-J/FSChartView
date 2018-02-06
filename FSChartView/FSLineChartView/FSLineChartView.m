@@ -277,7 +277,7 @@
     lineLayer.fillColor = nil;
     lineLayer.lineCap = kCALineCapRound;
     lineLayer.lineJoin = kCALineJoinRound;
-    lineLayer.lineWidth = 2.0;
+    lineLayer.lineWidth = [self fs_getLineWidthAtLineIndex:lineIndex];
     lineLayer.contentsScale = [UIScreen mainScreen].scale;
     
     
@@ -552,6 +552,13 @@
         return [self.delegate lineChartView:self lineColorAtLineIndex:lineIndex];
     }
     return [UIColor colorWithRed:77.0 / 255.0 green:196.0 / 255.0 blue:122.0 / 255.0 alpha:1.0f];
+}
+
+- (CGFloat)fs_getLineWidthAtLineIndex:(NSInteger)lineIndex {
+    if ([self.delegate respondsToSelector:@selector(lineChartView:lineWidthAtLineIndex:)]) {
+        return [self.delegate lineChartView:self lineWidthAtLineIndex:lineIndex];
+    }
+    return 2.0;
 }
 
 
