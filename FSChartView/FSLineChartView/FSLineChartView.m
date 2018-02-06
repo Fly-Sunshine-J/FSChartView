@@ -77,7 +77,6 @@
         self.backgroundColor = [UIColor colorWithRed:254 / 255.0 green:197 / 255.0 blue:52 / 255.0 alpha:1];
         self.layer.masksToBounds = YES;
         _contentView = [[UIView alloc] initWithFrame:self.bounds];
-        _contentView.backgroundColor = [UIColor redColor];
         [self addSubview:_contentView];
         _animatedDuration = 1.0;
     }
