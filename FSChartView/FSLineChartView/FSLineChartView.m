@@ -59,37 +59,18 @@
 
 // MARK: Overried
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        self.backgroundColor = [UIColor colorWithRed:254 / 255.0 green:197 / 255.0 blue:52 / 255.0 alpha:1];
-        self.layer.masksToBounds = YES;
-        _animatedDuration = 1.0;
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor colorWithRed:254 / 255.0 green:197 / 255.0 blue:52 / 255.0 alpha:1];
-        self.layer.masksToBounds = YES;
-        _contentView = [[UIView alloc] initWithFrame:self.bounds];
-        [self addSubview:_contentView];
-        _animatedDuration = 1.0;
+        [self fs_init];
     }
     return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = [UIColor colorWithRed:254 / 255.0 green:197 / 255.0 blue:52 / 255.0 alpha:1];
-    self.layer.masksToBounds = YES;
-    _contentView = [[UIView alloc] initWithFrame:self.bounds];
-    [self addSubview:_contentView];
-    _animatedDuration = 1.0;
+    [self fs_init];
 }
 
 - (void)layoutSubviews {
@@ -131,6 +112,16 @@
 }
 
 // MARK: Private Method
+
+- (void)fs_init {
+    self.backgroundColor = [UIColor colorWithRed:254 / 255.0 green:197 / 255.0 blue:52 / 255.0 alpha:1];
+    self.layer.masksToBounds = YES;
+    _contentView = [[UIView alloc] initWithFrame:self.bounds];
+    _contentView.layer.contentsScale = [UIScreen mainScreen].scale;
+    _contentView.layer.allowsEdgeAntialiasing = YES;
+    [self addSubview:_contentView];
+    _animatedDuration = 1.0;
+}
 
 - (void)fs_setupFrame {
     self.abscissaAxis.frame = CGRectMake(_insets.left, self.fs_height - _insets.bottom, self.fs_width - _insets.left, 1);
