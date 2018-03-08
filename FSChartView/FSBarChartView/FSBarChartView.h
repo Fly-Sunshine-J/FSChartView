@@ -177,6 +177,7 @@ typedef NS_ENUM(NSInteger, FSBarChartViewOrientation) {
 /**
  使用UICollectionView进行的柱状图封装，所以有很多类似UICollectionView的delegate和dataSource，以及公开方法，所有的计算都是在layoutSubviews这个方法进行的
  */
+IB_DESIGNABLE
 @interface FSBarChartView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame orientation:(FSBarChartViewOrientation)orientation;
@@ -193,8 +194,8 @@ typedef NS_ENUM(NSInteger, FSBarChartViewOrientation) {
  */
 @property (nonatomic, strong, readonly) UIView *ordinateAxis;
 
-@property (nonatomic, weak) id<FSBarChartViewDataSource> dataSource;
-@property (nonatomic, weak) id<FSBarChartViewDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<FSBarChartViewDataSource> dataSource;
+@property (nonatomic, weak) IBOutlet id<FSBarChartViewDelegate> delegate;
 
 /****UICollectionView相关的公开方法，可根据自己的需要自己新增公开方法，本来打算公开一个只读属性UICollectionView的***********/
 

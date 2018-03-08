@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="602" y="48"/>
         </scene>
-        <!--Story Board Controller-->
+        <!--Data Source-->
         <scene sceneID="Zci-dp-kHe">
             <objects>
                 <viewController storyboardIdentifier="FSStoryBoardController" id="Dz7-Pf-QW7" customClass="FSStoryBoardController" sceneMemberID="viewController">
@@ -48,14 +48,26 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dz7-Pf-QW7" id="2YZ-MH-tGa"/>
+                                    <outlet property="delegate" destination="Dz7-Pf-QW7" id="pLr-bc-JY2"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0G-5i-w4c" customClass="FSLineChartView">
                                 <rect key="frame" x="0.0" y="249" width="375" height="189"/>
                                 <color key="backgroundColor" red="0.80521966690000002" green="1" blue="0.41109537169999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dz7-Pf-QW7" id="9rk-BL-IIV"/>
+                                    <outlet property="delegate" destination="Dz7-Pf-QW7" id="VdD-bs-YqH"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-0q-NJH" customClass="FSPieChartView">
                                 <rect key="frame" x="0.0" y="458" width="375" height="189"/>
                                 <color key="backgroundColor" red="0.80521966690000002" green="1" blue="0.41109537169999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dz7-Pf-QW7" id="caG-UN-Kbp"/>
+                                    <outlet property="delegate" destination="Dz7-Pf-QW7" id="SVn-iu-ckQ"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -106,10 +106,11 @@
 
 @end
 
+IB_DESIGNABLE
 @interface FSPieChartView : UIView
 
-@property (nonatomic, weak) id<FSPieChartViewDelegate> delegate;
-@property (nonatomic, weak) id<FSPieChartViewDataSource> dataSource;
+@property (nonatomic, weak) IBOutlet id<FSPieChartViewDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<FSPieChartViewDataSource> dataSource;
 
 - (void)reloadData;
 

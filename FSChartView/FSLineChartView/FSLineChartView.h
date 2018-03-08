@@ -176,10 +176,11 @@ typedef NS_ENUM(NSInteger, FSLineJoinStyle) {
 /**
  折线的显示是根据frame的宽度显示，如果frame的宽度小于数据所需要的宽度，剩余数据不显示，所有的计算全部在layoutSubviews:方法内进行的
  */
+IB_DESIGNABLE
 @interface FSLineChartView : UIView
 
-@property (nonatomic, weak) id<FSLineChartViewDelegate> delegate;
-@property (nonatomic, weak) id<FSLineChartViewDataSource> dataSource;
+@property (nonatomic, weak) IBOutlet id<FSLineChartViewDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<FSLineChartViewDataSource> dataSource;
 
 
 @property (nonatomic, strong, readonly) UIView *abscissaAxis;

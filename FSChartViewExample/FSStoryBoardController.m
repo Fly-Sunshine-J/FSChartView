@@ -48,14 +48,6 @@
         [self.pieChartArray addObject:@(rand)];
     }
     [self.barChartView registerClass:[FSBarChartViewCell class] forCellWithReuseIdentifier:@"CELL"];
-    self.barChartView.delegate = self;
-    self.barChartView.dataSource = self;
-    
-    self.lineChartView.delegate = self;
-    self.lineChartView.dataSource = self;
-    
-    self.pieChartView.delegate = self;
-    self.pieChartView.dataSource = self;
     
 }
 
