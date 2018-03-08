@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FSChartView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "一款简单的图表库，内含柱状图(垂直&水平)、折线图、饼状图，支持StoryBoard。"
 
   # This description is used to generate tags and improve search results.
