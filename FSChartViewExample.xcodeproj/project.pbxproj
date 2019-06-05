@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447F681522A65EA800F23CC1 /* FSAxisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447F681322A65EA800F23CC1 /* FSAxisView.m */; };
+		447F681622A65EA800F23CC1 /* FSAxisView.h in Headers */ = {isa = PBXBuildFile; fileRef = 447F681422A65EA800F23CC1 /* FSAxisView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D76D087820203BB700B86464 /* FSPieChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = D76D087620203BB700B86464 /* FSPieChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D76D087920203BB700B86464 /* FSPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D76D087720203BB700B86464 /* FSPieChartView.m */; };
 		D76EC3DA2010370300A9F20E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D76EC3D92010370300A9F20E /* AppDelegate.m */; };
@@ -93,6 +95,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		447F681322A65EA800F23CC1 /* FSAxisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAxisView.m; sourceTree = "<group>"; };
+		447F681422A65EA800F23CC1 /* FSAxisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAxisView.h; sourceTree = "<group>"; };
 		D76D087620203BB700B86464 /* FSPieChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPieChartView.h; sourceTree = "<group>"; };
 		D76D087720203BB700B86464 /* FSPieChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPieChartView.m; sourceTree = "<group>"; };
 		D76EC3D52010370300A9F20E /* FSChartViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSChartViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +186,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447F681222A65EA800F23CC1 /* FSAxisView */ = {
+			isa = PBXGroup;
+			children = (
+				447F681422A65EA800F23CC1 /* FSAxisView.h */,
+				447F681322A65EA800F23CC1 /* FSAxisView.m */,
+			);
+			path = FSAxisView;
+			sourceTree = "<group>";
+		};
 		D76EC3CC2010370300A9F20E = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +268,7 @@
 		D76EC4102010372000A9F20E /* FSChartView */ = {
 			isa = PBXGroup;
 			children = (
+				447F681222A65EA800F23CC1 /* FSAxisView */,
 				D76EC438201037A000A9F20E /* FSLineChartView */,
 				D76EC4372010378600A9F20E /* FSPieChartView */,
 				D76EC4322010376C00A9F20E /* FSBarChartView */,
@@ -314,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76EC4212010372100A9F20E /* FSChartView.h in Headers */,
+				447F681622A65EA800F23CC1 /* FSAxisView.h in Headers */,
 				D77E937420170F1300294041 /* FSBarChartViewCell.h in Headers */,
 				D7EFEE132019A7640017ED55 /* FSLineChartView.h in Headers */,
 				D77E93702017051B00294041 /* FSBarChartView.h in Headers */,
@@ -559,6 +574,7 @@
 				D76EC44120103A6F00A9F20E /* CALayer+FSFrame.m in Sources */,
 				D76D087920203BB700B86464 /* FSPieChartView.m in Sources */,
 				D77E937520170F1300294041 /* FSBarChartViewCell.m in Sources */,
+				447F681522A65EA800F23CC1 /* FSAxisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

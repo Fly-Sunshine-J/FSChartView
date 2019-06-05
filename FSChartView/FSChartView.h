@@ -16,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char FSChartViewVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <FSChartView/PublicHeader.h>
 
+#import <FSChartView/FSAxisView.h>
 #import <FSChartView/FSBarChartView.h>
 #import <FSChartView/FSBarChartViewCell.h>
 #import <FSChartView/FSLineChartView.h>

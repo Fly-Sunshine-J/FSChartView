@@ -33,12 +33,15 @@
     UIEdgeInsets _insets;
     CGFloat _maxSectionCount;
     NSInteger _lineCount;
+    FSAxisView *_abscissaAxis;
+    FSAxisView *_ordinateAxis;
+    
 }
 
 @property (nonatomic, strong) UIView *contentView;
 
-@property (nonatomic, strong, readwrite) UIView *abscissaAxis;
-@property (nonatomic, strong, readwrite) UIView *ordinateAxis;
+//@property (nonatomic, strong, readwrite) UIView *abscissaAxis;
+//@property (nonatomic, strong, readwrite) UIView *ordinateAxis;
 
 @property (nonatomic, strong) NSMutableArray<UIView *> *lineViews;
 @property (nonatomic, strong) NSMutableArray<CATextLayer *> *ordinateLayers;
@@ -124,9 +127,12 @@
 }
 
 - (void)fs_setupFrame {
+//    _abscissaAxis = nil;
+//    _ordinateAxis = nil;
+//    [self abscissaAxis];
+//    [self ordinateAxis];
     self.abscissaAxis.frame = CGRectMake(_insets.left, self.fs_height - _insets.bottom, self.fs_width - _insets.left, 1);
     self.ordinateAxis.frame = CGRectMake(_insets.left, 0, 1, self.fs_height - _insets.bottom);
-
 }
 
 - (void)fs_setupNoDataAxis {
@@ -157,8 +163,8 @@
             [self.lineViews addObject:yLineView];
             if (ySection == 0) {
                 yLineView.backgroundColor = [UIColor clearColor];
-                self.abscissaAxis.fs_height = yLineView.fs_height;
-                self.ordinateAxis.fs_width = yLineView.fs_height;
+//                self.abscissaAxis.fs_height = yLineView.fs_height;
+//                self.ordinateAxis.fs_width = yLineView.fs_height;
             }
         }
         
@@ -280,7 +286,6 @@
     lineLayer.lineWidth = [self fs_getLineWidthAtLineIndex:lineIndex];
     lineLayer.contentsScale = [UIScreen mainScreen].scale;
     
-    
     UIBezierPath *linePath = [UIBezierPath bezierPath];
     NSMutableArray<CAShapeLayer *> *pointArray = [NSMutableArray array];
     NSMutableArray<CATextLayer *> *textLayers = [NSMutableArray array];
@@ -394,20 +399,19 @@
 
 // MARK: Lazy Load
 
-- (UIView *)abscissaAxis {
+- (FSAxisView *)abscissaAxis {
     if (!_abscissaAxis) {
-        _abscissaAxis = [[UIView alloc] init];
-        _abscissaAxis.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+        CGRect frame = CGRectMake(_insets.left, self.fs_height - _insets.bottom, self.fs_width - _insets.left, 1);
+        _abscissaAxis = [[FSAxisView alloc] initWithAxisType:self.axisType frame:frame axisColor:[UIColor whiteColor]];
         [self.contentView addSubview:_abscissaAxis];
     }
     return _abscissaAxis;
 }
 
-
-- (UIView *)ordinateAxis {
+- (FSAxisView *)ordinateAxis {
     if (!_ordinateAxis) {
-        _ordinateAxis = [[UIView alloc] init];
-        _ordinateAxis.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+        CGRect frame = CGRectMake(_insets.left, 0, 1, self.fs_height - _insets.bottom);
+        _ordinateAxis = [[FSAxisView alloc] initWithAxisType:self.axisType frame:frame axisColor:[UIColor whiteColor]];
         [self.contentView addSubview:_ordinateAxis];
     }
     return _ordinateAxis;
