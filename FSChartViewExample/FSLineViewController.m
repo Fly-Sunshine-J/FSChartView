@@ -49,7 +49,7 @@
         
         
         FSLineChartView *lineViewChart1 = [[FSLineChartView alloc] initWithFrame:CGRectMake(0, 0, 100 * 20 + 40, 200)];
-        lineViewChart1.axisType = FSAxisTypeSolidArrow;
+        lineViewChart1.axisType = FSAxisTypeOpenArrow;
         self.lineChartView1  = lineViewChart1;
         lineViewChart1.delegate = self;
         lineViewChart1.dataSource = self;

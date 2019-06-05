@@ -77,7 +77,7 @@
     arrowLayer.strokeColor = self.axisColor.CGColor;
     arrowLayer.fillColor = [UIColor clearColor].CGColor;
     [self.layer addSublayer:arrowLayer];
-    [self.layer addSublayer:[self getLineLayer:rect]];
+//    [self.layer addSublayer:[self getLineLayer:rect]];
 }
 
 /**
@@ -154,12 +154,12 @@
 
 -(UIBezierPath *)drawOpenVerticalArrowPath:(CGRect)rect{
     UIBezierPath *arrowPath = [UIBezierPath bezierPath];
-    CGFloat length = rect.size.width;
-    [arrowPath moveToPoint:CGPointMake(0, length)];
-    [arrowPath addLineToPoint:CGPointMake(length/2.0, 0)];
-    [arrowPath addLineToPoint:CGPointMake(length, length)];
-    [arrowPath moveToPoint:CGPointMake(length/2.0, 0)];
+    CGFloat length = 10;
+    [arrowPath moveToPoint:CGPointMake(-length/2.0, length)];
+    [arrowPath addLineToPoint:CGPointMake(0, 0)];
     [arrowPath addLineToPoint:CGPointMake(length/2.0, length)];
+    [arrowPath moveToPoint:CGPointMake(0, 0)];
+    [arrowPath addLineToPoint:CGPointMake(0, rect.size.height)];
     return arrowPath;
 }
 
@@ -172,13 +172,13 @@
 
 -(UIBezierPath *)drawOpenHorizontalArrowPath:(CGRect)rect{
     UIBezierPath *arrowPath = [UIBezierPath bezierPath];
-    CGFloat length = rect.size.height;
+    CGFloat length = 10;
     CGFloat width = rect.size.width;
-    [arrowPath moveToPoint:CGPointMake(width-length, 0)];
-    [arrowPath addLineToPoint:CGPointMake(width, length/2.0)];
-    [arrowPath addLineToPoint:CGPointMake(width-length, length)];
-    [arrowPath moveToPoint:CGPointMake(width-length, length/2.0)];
-    [arrowPath addLineToPoint:CGPointMake(width, length/2.0)];
+    [arrowPath moveToPoint:CGPointMake(width-length, -length/2.0)];
+    [arrowPath addLineToPoint:CGPointMake(width, 0)];
+    [arrowPath addLineToPoint:CGPointMake(width-length, length/2.0)];
+    [arrowPath moveToPoint:CGPointMake(0, 0)];
+    [arrowPath addLineToPoint:CGPointMake(width, 0)];
     [arrowPath closePath];
     return arrowPath;
 }
@@ -204,10 +204,10 @@
  */
 -(UIBezierPath *)drawVerticalArrowPath:(CGRect)rect{
     UIBezierPath *arrowPath = [UIBezierPath bezierPath];
-    CGFloat length = rect.size.width;
-    [arrowPath moveToPoint:CGPointMake(0, length)];
-    [arrowPath addLineToPoint:CGPointMake(length/2.0, 0)];
-    [arrowPath addLineToPoint:CGPointMake(length, length)];
+    CGFloat length = 10;
+    [arrowPath moveToPoint:CGPointMake(-length/2.0, length)];
+    [arrowPath addLineToPoint:CGPointMake(0, 0)];
+    [arrowPath addLineToPoint:CGPointMake(length/2.0, length)];
     [arrowPath closePath];
     return arrowPath;
 }
@@ -233,11 +233,11 @@
  */
 -(UIBezierPath *)drawHorizontalArrowPath:(CGRect)rect{
     UIBezierPath *arrowPath = [UIBezierPath bezierPath];
-    CGFloat length = rect.size.height;
+    CGFloat length = 10;
     CGFloat width = rect.size.width;
-    [arrowPath moveToPoint:CGPointMake(width-length, 0)];
-    [arrowPath addLineToPoint:CGPointMake(width, length/2.0)];
-    [arrowPath addLineToPoint:CGPointMake(width-length, length)];
+    [arrowPath moveToPoint:CGPointMake(width-length, -length/2.0)];
+    [arrowPath addLineToPoint:CGPointMake(width, 0)];
+    [arrowPath addLineToPoint:CGPointMake(width-length, length/2.0)];
     [arrowPath closePath];
     return arrowPath;
 }
@@ -251,27 +251,6 @@
     if (self.axisType == FSAxisTypeSolidArrow) {
         self.axisLayer.fillColor = axisColor.CGColor;
     }
-}
-
--(void)setFrame:(CGRect)frame{
-    CGFloat width = frame.size.width;
-    CGFloat height = frame.size.height;
-    if (height>width&&width<10) {
-        if (self.axisType!=FSAxisTypeNone) {
-            frame.size.width = 10;
-        }else{
-            frame.size.width = 1;
-        }
-        
-    }
-    if (width>height&&height<10) {
-        if (self.axisType!=FSAxisTypeNone) {
-            frame.size.height = 10;
-        }else{
-            frame.size.height = 1;
-        }
-    }
-    [super setFrame:frame];
 }
 
 
