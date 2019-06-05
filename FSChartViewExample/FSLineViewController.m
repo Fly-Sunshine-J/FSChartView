@@ -41,18 +41,18 @@
 //    如果初始化数据比较多，如果直接生成  可能会出现卡顿的现象
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         FSLineChartView *lineViewChart = [[FSLineChartView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200)];
+        lineViewChart.axisType = FSAxisTypeNone;
         self.lineChartView  = lineViewChart;
         lineViewChart.delegate = self;
         lineViewChart.dataSource = self;
-        lineViewChart.axisType = FSAxisTypeSolidArrow;
         [self.view addSubview:lineViewChart];
         
         
         FSLineChartView *lineViewChart1 = [[FSLineChartView alloc] initWithFrame:CGRectMake(0, 0, 100 * 20 + 40, 200)];
+        lineViewChart1.axisType = FSAxisTypeSolidArrow;
         self.lineChartView1  = lineViewChart1;
         lineViewChart1.delegate = self;
         lineViewChart1.dataSource = self;
-        lineViewChart1.axisType = FSAxisTypeOpenArrow;
         UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 320, self.view.frame.size.width, 200)];
         scrollView.showsVerticalScrollIndicator = NO;
         scrollView.showsHorizontalScrollIndicator = NO;

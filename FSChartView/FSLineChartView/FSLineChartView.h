@@ -185,8 +185,8 @@ IB_DESIGNABLE
 @property (nonatomic, weak) IBOutlet id<FSLineChartViewDataSource> dataSource;
 
 
-@property (nonatomic, strong, readonly) UIView *abscissaAxis;
-@property (nonatomic, strong, readonly) UIView *ordinateAxis;
+@property (nonatomic, strong, readonly) FSAxisView *abscissaAxis;
+@property (nonatomic, strong, readonly) FSAxisView *ordinateAxis;
 
 
 /**

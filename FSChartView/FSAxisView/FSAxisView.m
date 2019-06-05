@@ -8,25 +8,20 @@
 
 #import "FSAxisView.h"
 
+@interface FSAxisView ()
+
+@property (nonatomic, strong) CAShapeLayer *axisLayer;
+
+@end
+
 @implementation FSAxisView
 
 -(instancetype)initWithAxisType:(FSAxisType)axisType
                           frame:(CGRect)frame
                       axisColor:(nonnull UIColor *)axisColor{
-    CGFloat width = frame.size.width;
-    CGFloat height = frame.size.height;
-    if (height>width&&width<10&&axisType!=FSAxisTypeNone) {
-        frame.size.width = 10;
-    }
-    if (width>height&&height<10&&axisType!=FSAxisTypeNone) {
-        frame.size.height = 10;
-    }
     if (self = [super initWithFrame:frame]) {
         self.axisType = axisType;
         self.axisColor = axisColor;
-        if (axisType!=FSAxisTypeNone) {
-            self.backgroundColor = [UIColor clearColor];
-        }
     }
     return self;
 }
@@ -34,7 +29,7 @@
 -(void)drawRect:(CGRect)rect{
     
     [super drawRect:rect];
-        switch (self.axisType) {
+    switch (self.axisType) {
         case FSAxisTypeSolidArrow:
             [self drawSolidArrow:rect];
             break;
@@ -44,10 +39,31 @@
         case FSAxisTypeOpenArrow:
             [self drawOpenArrow:rect];
             break;
-        
+        case FSAxisTypeNone:
+            [self drawNoneType:rect];
+            break;
         default:
             break;
     }
+}
+
+-(void)drawNoneType:(CGRect)rect{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    if (rect.size.height>rect.size.width) {
+        [path moveToPoint:CGPointMake(0, 0)];
+        [path addLineToPoint:CGPointMake(0, rect.size.height)];
+    }else{
+        [path moveToPoint:CGPointMake(0, 0)];
+        [path addLineToPoint:CGPointMake(rect.size.width, 0)];
+    }
+    
+    CAShapeLayer *arrowLayer = [CAShapeLayer layer];
+    arrowLayer.strokeColor = self.axisColor.CGColor;
+    arrowLayer.path = path.CGPath;
+    arrowLayer.lineWidth = 1;
+    self.axisLayer = arrowLayer;
+    [self.layer addSublayer:arrowLayer];
+    
 }
 
 -(void)drawOpenArrow:(CGRect)rect{
@@ -80,6 +96,7 @@
     arrowLayer.strokeColor = self.axisColor.CGColor;
     arrowLayer.fillColor = [UIColor clearColor].CGColor;
     [self.layer addSublayer:arrowLayer];
+    self.axisLayer = arrowLayer;
     [self.layer addSublayer:[self getLineLayer:rect]];
 }
 
@@ -101,6 +118,7 @@
     arrowLayer.strokeColor = self.axisColor.CGColor;
     arrowLayer.fillColor = self.axisColor.CGColor;
     [self.layer addSublayer:arrowLayer];
+    self.axisLayer = arrowLayer;
     [self.layer addSublayer:[self getLineLayer:rect]];
 }
 
@@ -223,5 +241,38 @@
     [arrowPath closePath];
     return arrowPath;
 }
+
+#pragma mark - Property
+
+-(void)setAxisColor:(UIColor *)axisColor{
+    _axisColor = axisColor;
+    if (!self.axisLayer) return;
+    self.axisLayer.strokeColor = axisColor.CGColor;
+    if (self.axisType == FSAxisTypeSolidArrow) {
+        self.axisLayer.fillColor = axisColor.CGColor;
+    }
+}
+
+-(void)setFrame:(CGRect)frame{
+    CGFloat width = frame.size.width;
+    CGFloat height = frame.size.height;
+    if (height>width&&width<10) {
+        if (self.axisType!=FSAxisTypeNone) {
+            frame.size.width = 10;
+        }else{
+            frame.size.width = 1;
+        }
+        
+    }
+    if (width>height&&height<10) {
+        if (self.axisType!=FSAxisTypeNone) {
+            frame.size.height = 10;
+        }else{
+            frame.size.height = 1;
+        }
+    }
+    [super setFrame:frame];
+}
+
 
 @end
