@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FSAxisView.h"
+
 
 typedef NS_ENUM(NSInteger, FSLineJoinStyle) {
     FSLineJoinStyleRound = 0,  //连接点是圆形
@@ -191,6 +193,11 @@ IB_DESIGNABLE
  动画时长，默认1s
  */
 @property (nonatomic, assign) CGFloat animatedDuration;
+
+/**
+ 坐标轴类型
+ */
+@property (nonatomic, assign) FSAxisType axisType;
 
 /**
  刷新所有数据

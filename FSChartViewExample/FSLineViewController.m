@@ -44,6 +44,7 @@
         self.lineChartView  = lineViewChart;
         lineViewChart.delegate = self;
         lineViewChart.dataSource = self;
+        lineViewChart.axisType = FSAxisTypeSolidArrow;
         [self.view addSubview:lineViewChart];
         
         
@@ -51,6 +52,7 @@
         self.lineChartView1  = lineViewChart1;
         lineViewChart1.delegate = self;
         lineViewChart1.dataSource = self;
+        lineViewChart1.axisType = FSAxisTypeOpenArrow;
         UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 320, self.view.frame.size.width, 200)];
         scrollView.showsVerticalScrollIndicator = NO;
         scrollView.showsHorizontalScrollIndicator = NO;
